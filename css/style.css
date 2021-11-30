@@ -107,6 +107,20 @@ body {
     color: var(--title-text-color);
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.header-link.active::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    position: absolute;
+    bottom: -33px;
+    left: 0;
+    border-radius: 2px;
+
 }
 
 .icon-mail,
@@ -131,6 +145,9 @@ body {
 .icon-mail:hover {
     color: var(--accent-color);
     fill: var(--accent-color);
+    transition-property: color fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:focus,
@@ -194,6 +211,9 @@ body {
     background-color: #118ce8;
     color: var(--second-colr-text);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition-property: color background-color filter;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .preview-btn:focus,
@@ -201,6 +221,7 @@ body {
     background-color: #118ce8;
     color: var(--second-colr-text);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    
 }
 
 /* ----------------стиль для страницы портфолио ----------------*/
@@ -218,14 +239,47 @@ body {
 }
 
 .portfolio {
+    display: block;
     margin-right: 30px;
     margin-bottom: 30px;
     border: 1px solid #eeeeee;
+
     
+}
+
+.portfolio-wrap {
+        position: relative;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+}
+
+.portfolio-text-overlay {
+    position: absolute;
+    color: var(--second-colr-text);
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    background-color: rgba(33, 150, 243, 0.9);
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateY(100%);
+    padding: 63px 24px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition-property: color fill ;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.portfolio:hover .portfolio-text-overlay {
+    transform: translate(0);
 }
 
 .portfolio:nth-child(3n) {
@@ -343,13 +397,36 @@ body {
 }
 .img-work:not(:last-child) {
     margin-right: 30px;
+
+}
+.img-work {
+    position: relative;
 }
 
+.text-work {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700px;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--second-colr-text);
+    line-height: 70px;
+}
 /* -----------------командв------------------- */
 
 .team-section {
     background-color: #f5f4fa;
 }
+
 .team {
     display: flex;
 }
@@ -388,6 +465,10 @@ body {
 .social-link:focus {
     background-color: var(--accent-color);
     color: #ffffff;
+    transition-property: color fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .social-icon {
@@ -435,6 +516,10 @@ body {
 .customers:hover {
     color: var(--accent-color);
     border-color: var(--accent-color);
+    transition-property: color fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .customers-link:focus,
@@ -513,6 +598,10 @@ address {
 .social-link:focus {
     background-color: var(--accent-color);
     color: #ffffff;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .list-item-footer {
