@@ -635,9 +635,8 @@ address {
 
 }
 
-.backdrop.is-hidden .modal {
-    transform: scale(1.5);
-    transition: transform 500ms;
+.backdrop.is-hidden .modal {;
+    transition: matrix(1, 0, 0, 1, -314.8, -185.2);
 }
 
 
@@ -651,7 +650,7 @@ address {
     left: 50%;
     transform: scale(1);
     transform: translate(-50%, -50%);  
-    transition: transform 500ms;
+    transition: transform matrix(1, 0, 0, 1, -314.8, -185.2);
 }
 
 .modal-close {
