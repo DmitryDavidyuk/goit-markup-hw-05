@@ -623,3 +623,54 @@ address {
     text-transform: uppercase;
     color: #ffffff;
 }
+
+.backdrop {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    transition: opacity 500ms, visibility 500ms;
+    
+
+}
+
+.backdrop.is-hidden .modal {
+    transform: scale(1.5);
+    transition: transform 500ms;
+}
+
+
+.modal {
+    width: 528px;
+    min-height: 600px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(1);
+    transform: translate(-50%, -50%);  
+    transition: transform 500ms;
+}
+
+.modal-close {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
