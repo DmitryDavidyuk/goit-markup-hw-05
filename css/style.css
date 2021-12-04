@@ -112,7 +112,7 @@ body {
 
 .header-link.active::after {
   display: block;
-  content: "";
+  content: '';
   width: 100%;
   height: 4px;
   background-color: var(--accent-color);
@@ -165,10 +165,7 @@ body {
 /* ------------------------preview----------------------------------*/
 .preview {
   background-color: #2f303a;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/preview.jpg);
   padding: 200px;
   background-repeat: no-repeat;
